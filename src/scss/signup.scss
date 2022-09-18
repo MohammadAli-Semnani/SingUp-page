@@ -1,107 +1,10 @@
-@import "mixin";
 @import "variables";
-// .login-page{
-//     height: 100vh;
-
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-// }
-// .form{
-//     display: flex;
-//     align-items: center;
-//     justify-content: space-between;
-//     flex-direction: row;
-//     margin-bottom: 10px;
-//     margin-left: 300px;
-//     padding: 20px;
-//     transition: all .2s ease-in;
-//     label{
-//     text-align: left;
-//     margin-bottom: 10px;
-//     @include fontStyle(1.2rem, lighter, $name-color);
-// }
-//     input{
-//     @include border-style(250px,38px,4px,none,$box-color);
-//     &::placeholder{
-//         @include fontStyle(.8rem, 600, $place-holder);
-//         padding: 0 10px;
-//     }
-// }
-// }
-// .flex-column{
-//     display: flex;
-//     flex-direction: row;
-//     align-items: center;
-//     justify-content: flex-start;
-// }
-
-
-
-
-// body {
-//   background: linear-gradient(120deg, #ad5389, #3c1053);
-//   height: 100vh;
-//   padding: 0;
-//   margin: 0;
-//   font-family: monospace;
-// }
-// .login-page {
-//   position: absolute;
-//   left: 50%;
-//   top: 50%;
-//   transform: translate(-50%, -50%);
-//   width: 400px;
-//   background-color: white;
-//   border-radius: 10px;
-//   h1 {
-//     text-align: center;
-//     padding-bottom: 20px;
-//     border-bottom: 1px solid silver;
-//   }
-//   form {
-//     box-sizing: border-box;
-//     padding: 0 40px;
-//   }
-// }
-// .form {
-//   position: relative;
-//   border-bottom: 2px solid #adadad;
-//   margin: 30px 0;
-//   input {
-//     width: 100%;
-//     border: none;
-//     height: 40px;
-//     font-size: 16px;
-//     background: none;
-//     outline: none;
-    
-//   }
-//   label {
-//     position: absolute;
-//     color: #adadad;
-//     top: 50%;
-//     left: 5px;
-//     transform: translateY(-50%);
-//     font-size: 16px;
-//     pointer-events: none;
-//   }
-//   span::before {
-//     content: "";
-//     width: 100%;
-//     height: 2px;
-//     position: absolute;
-//     height: 40px;
-//     left: 0;
-//     color: #750772;
-//   }
-// }
 
 body{
   height: 100vh;
   margin: 0;
   padding: 0;
-  background-color: #4a90e2;
+  background-color: $bg;
   background-image: 
       radial-gradient(at 47% 33%, hsl(87.00, 55.00000000000001%, 57.99999999999999%) 0, transparent 59%), 
       radial-gradient(at 82% 65%, hsl(271.58, 63%, 24%) 0, transparent 55%);
@@ -126,7 +29,7 @@ body{
     font-weight: bold;
     border-bottom: .2px solid silver;
     padding-bottom: 20px;
-    color: #c7ecee;
+    color: $header;
     margin-top: 20px;
   }
 }
@@ -147,12 +50,12 @@ form{
     letter-spacing: 1px;
     font-size: 21px;
     margin-bottom: 8px;
-    color: #fff;
+    color: $text-color;
   }
   .completed{
     text-align: center;
     font-size: 18px;
-    color: #fff;
+    color: $text-color;
     width: 290px;
     height: 35px;
     border-radius: 10px;
@@ -164,8 +67,8 @@ form{
     border: 1px solid rgba(255, 255, 255, 0.125);
     margin-bottom: 5px;
     &:focus{
-      background-color:#27ae5f64;
-      border: 2px solid #27ae60;
+      background-color:$bg-compelete;
+      border: 2px solid $border-compelete;
       outline: none;
     }
   }
@@ -173,7 +76,7 @@ form{
 .uncompleted{
     text-align: center;
     font-size: 18px;
-    color: #fff;
+    color: $text-color;
     width: 290px;
     height: 35px;
     border-radius: 10px;
@@ -187,8 +90,8 @@ form{
     margin-bottom: 5px;
     &:focus{
       outline: none;
-      background-color:#27ae5f64;
-      border: 2px solid #27ae60;
+      background-color:$bg-compelete;
+      border: 2px solid $border-compelete;
     }
 
 }
@@ -198,14 +101,14 @@ form{
   align-items: center;
   position: relative;
   display: flex;
-  color: #27ae60;
+  color: $border-compelete;
   font-size: 18px;
   text-align: center;
   margin: 20px 10px 35px 60px;
   input[type=checkbox]{
     width: 20px;
     height: 20px;
-    border: 1px solid #27ae60;
+    border: 1px solid $border-compelete;
     appearance: none;
     border-radius: 5px;
     margin-left: 20px;
@@ -214,7 +117,7 @@ form{
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    background-color: #27ae60;
+    background-color: $border-compelete;
     }
   }
 }
@@ -224,7 +127,7 @@ form{
   align-items: center;
   margin: 15px 0;
   a{
-    color: #27ae60;
+    color: $border-compelete;
     text-decoration: none;
     font-size: 18px;
     font-weight: bold;
@@ -235,14 +138,14 @@ form{
     }
   }
   button{
-    background-color: #27ae60;
+    background-color: $border-compelete;
     border: none;
     width: 90px;
     height: 35px;
     border-radius: 7px;
     font-size: 18px;
     margin-left: 50px;
-    color: #fff;
+    color: $text-color;
     cursor: pointer;
     transition: all .3s ease;
     &:hover{
@@ -258,5 +161,5 @@ form{
     border-radius:2px;
     bottom: -22px;
     font-size: 14px;
-    color: #fff;
+    color: $text-color;
   }
